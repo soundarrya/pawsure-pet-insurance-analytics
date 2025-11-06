@@ -1,5 +1,10 @@
 PawSure Pet Insurance – SQL Data Engineering + BA Case Study
 -------------------------------------------------------------------------------------------
+Author: Soundarya Sainathan  
+Role Target:SQL Developer + Business Analyst (Hybrid)
+
+This is a hybrid project: Business Case + SQL Engineering + ETL Data Pipeline
+------------------------------------------------------------------------------------------
 Project Snapshot
 Imagine this:
 
@@ -58,8 +63,17 @@ Picture this pipeline:
   * Dim tables (Pet, Disease, Clinic, City) make every report relatable and drill-down ready
   * KPI Views crunch the numbers and fuel business decisions
 
-In short:
---------
-This project isn’t just about clean code or smart queries. It’s about connecting SQL chops with business sense—so the numbers start telling stories, the risks get caught early, and pets (and pet parents) get the best care, sustainably.
-In short:
+Azure Blob Storage (daily raw CSV files from partner vet clinics)
+                ↓
+     StageClaims (Raw Landing Zone)
+                ↓  Transform + Validate (Dimension lookups: Disease, Clinic, City, PetType)
+     ┌───────────────────────────┐
+     │ Rows that fail mapping   │
+     │ (bad city / disease etc) │
+     └───────────────┬──────────┘
+                     ↓
+                RejectLog  (Bad Data Store)
+                     ↓
+              FactClaim (Clean, Analytics-Ready Data)
+
 This project isn’t just about clean code or smart queries. It’s about connecting SQL chops with business sense—so the numbers start telling stories, the risks get caught early, and pets (and pet parents) get the best care, sustainably.
