@@ -1,6 +1,4 @@
 PawSure Pet Insurance – SQL Data Engineering + BA Case Study
-Author: Soundarya Sainathan
-Hybrid Role Target: SQL Developer + Business Analyst
 -------------------------------------------------------------------------------------------
 Project Snapshot
 Imagine this:
